@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocumentoPrivado</title>
+</head>
+<body>
+    <h1>Computadores</h1>
+    <div>
+        Bienvenido<span id="user"></span> este recurso es privado y solo se puede ver porque está autenticado. <a href="privado2.html"> Vaya a privado 2</a>
+    </div>
+
+    <script type="text/javascript">    
+        $.get("/user", function (data) { 
+            $("#user").html(data.name);             
+        });
+    </script>
+</body>
+</html>
